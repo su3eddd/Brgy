@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamot 2</title>
+</head>
+<body>
+    <!--NAVIGATION BAR-->
+    <header class="header">
+        <a href="#home" class="logo">Lamot 2</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#Services">Services</a>
+            <button id="subscribeBtn" class="subscribe-btn">Subscribe</button>
+        </nav>
+    </header>
+
+    <!--HOME PAGE-->
+    <section id="home" class="home-section">
+        <h2>Barangay Lamot 2</h2>
+        <p>"Lamot 2 stands as a beacon of progress, innovation, and cooperation for all."</p>
+    </section>
+
+    <!--ABOUT ME PAGE-->
+    <section id="about" class="about-section">
+        <div class="about-col-1">
+            <img src="304951923_447776437390675_2490744543080740540_n.jpg">
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">About</h1>
+            <p>Barangay Lamot 2 is a vibrant and close-knit community located in the heart of Calauan, Laguna. 
+                Known for its strong sense of unity and cooperation, the barangay is committed to fostering a safe and peaceful environment for all its residents.</p>
+        </div>
+    </section>
+
+    <!--SERVICES PAGE-->
+    <section id="Services" class="portfolio-section">
+        <h1>Services</h1>
+        <ul>
+            <li><q>Senior Citizen Services</q></li>
+            <li><q>Youth and Sports Development</q></li>
+            <li><q>Livelihood Programs</q></li>
+            <li><q>Disaster Preparedness</q></li>
+            <li><q>Peace and Order</q></li>
+            <li><q>Health Services</q></li>      
+        </ul>
+    </section>
+
+    <!--NEWSLETTER POP-UP-->
+    <div id="popupForm" class="popup-form">
+        <div class="popup-content">
+            <span id="closePopup" class="close-btn">&times;</span>
+            <h2>Subscribe to our Newsletter</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!--JAVASCRIPT FOR NAVIGATION & POP-UP-->
+    <script>
+        const navLinks = document.querySelectorAll('.navbar a');
+        const subscribeBtn = document.getElementById('subscribeBtn');
+        const popupForm = document.getElementById('popupForm');
+        const closePopup = document.getElementById('closePopup');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                navLinks.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Show popup after 10 seconds
+        setTimeout(function() {
+            popupForm.style.display = 'flex';
+        }, 10000);
+
+        // Show popup when button is clicked
+        subscribeBtn.addEventListener('click', function() {
+            popupForm.style.display = 'flex';
+        });
+
+        // Close popup
+        closePopup.addEventListener('click', function() {
+            popupForm.style.display = 'none';
+        });
+
+        // Close popup when clicking outside of it
+        window.addEventListener('click', function(event) {
+            if (event.target == popupForm) {
+                popupForm.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

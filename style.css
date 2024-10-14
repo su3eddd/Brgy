@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #1f4762, #153040);
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.103);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 40px;
+    color: #ffc619;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a {
+    font-size: 30px;
+    color: #ffc619;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 40px;
+    justify-content: space-between;
+}
+
+.navbar a:hover {
+    color: #fff;
+}
+
+/* Subscribe Button in Navbar */
+.subscribe-btn {
+    background-color: #ffc619;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.subscribe-btn:hover {
+    background-color: #ffb700;
+}
+
+/* Section Styles */
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px; 
+    font-size: 2rem;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  #home h2 {
+    font-size: 6rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 2rem;
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+#about{
+    padding: 80px 0;
+    color: #ffffff;
+}
+.sub-title{
+    color: #fda300;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 70%;
+    border-radius: 15px;
+}
+.about-col-2 {
+    flex-basis: 60%;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 0;
+}
+
+.about-col-2 p{
+    text-align: left;
+}
+
+#port {
+    text-align: center;
+  }
+  
+  .portfolio-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .portfolio-section h1 {
+    font-size: 8rem; 
+  }
+  
+  .portfolio-section ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .portfolio-section ul li {
+    font-size: 2rem;
+    color: #fda300;
+    font-weight: bold;
+  }
+
+
+/* Pop-up Form Styles */
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    color: #333;
+}
+
+.popup-content h2 {
+    color: #1f4762;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="email"] {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-content .submit-btn {
+    background-color: #ffc619;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content .submit-btn:hover {
+    background-color: #ffb700;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.subscribe-btn {
+    background-color: #ffc619;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.subscribe-btn:hover {
+    background-color: #ffb700;
+}
+
